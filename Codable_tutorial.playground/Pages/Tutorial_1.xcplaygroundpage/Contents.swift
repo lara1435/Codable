@@ -1,13 +1,5 @@
 import Foundation
 
-// object -> jsonString   => Encode
-// jsonString -> Object   => Decode
-
-// Encode => Encodable protocol
-// Decode => Decodable protocol
-
-// Codable => typealias => Encodable & Decodable
-
 // ****** jsonString ******
 let employeeString = """
 {
@@ -54,4 +46,4 @@ if let employeeString = getEmployee(employeeObject: employee) {
 }
 
 
-//: [Next](@next)
+//: [Previous](@previous) [Next](@next)
