@@ -54,7 +54,6 @@ extension Employee {
 
 // jsonString -> Object
 func getEmployee(employeeString: String) -> Employee? {
-    print("\(employeeString)")
     guard let employeeData = employeeString.data(using: .utf8), let employeeObject = try? JSONDecoder().decode(Employee.self, from: employeeData) else {
         return nil
     }
@@ -63,7 +62,7 @@ func getEmployee(employeeString: String) -> Employee? {
 }
 
 if let employee = getEmployee(employeeString: employeeString) {
-    print("name: \(employee.name), age: \(employee.age), address: \(employee.address)")
+    print("name: \(employee.name), age: \(employee.age), address: \(employee.address), department: \(employee.department.name)")
 } else {
     print("Invalid Employee")
 }
